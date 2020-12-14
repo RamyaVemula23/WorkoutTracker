@@ -1,0 +1,39 @@
+<form #myForm="ngForm">
+  <div class="card w-50" style="background-color:cornsilk">
+    <div class="card-body">
+      <h5 class="card-title text-center">Add Workout</h5>
+      <div class="form-group row">
+        <label for="Title" class="col-sm-2">Title:</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" [(ngModel)]= "workoutTitle" name = "workoutTitle"id="Title" placeholder="Title" required>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="Note" class="col-sm-2">Note:</label>
+        <div class="col-sm-5">
+          <textarea rows="4" cols="50" id="Note" [(ngModel)]= "workoutNote" name = "workoutNote"  placeholder="Note"></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="calories" class="col-sm-4">Calories Burnt Per Min:</label>
+        <div class="col-sm-2">
+          <input type="number" min=0 step=0.1 class="form-control"  [(ngModel)]= "caloriesBurntPerMin" name = "caloriesBurntPerMin" id="calories" required >
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="category" class="col-sm-2">Category</label>
+        <div class="col-sm-4">
+          <ng-multiselect-dropdown [placeholder]="'Select Category'" [data]="dropdownList" [(ngModel)]="selectedItems"
+            [settings]="dropdownSettings" name="selectedItems">
+          </ng-multiselect-dropdown>
+        </div>
+      </div>
+      <div class="form-group row" style="margin:auto">
+        <button type="submit" class="btn btn-primary" [disabled]="!myForm.form.valid" (click)="addWorkout()"><b>Add Workout</b></button>
+        <span id = "msg" style="color: green"></span>
+      </div>
+
+
+    </div>
+  </div>
+</form>

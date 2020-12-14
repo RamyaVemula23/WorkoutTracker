@@ -1,0 +1,42 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- <div>
+  <ng-marquee>
+    <mark></mark>
+  </ng-marquee>  
+</div> -->
+
+
+<body style="background-image: url('https://www.stagemilk.com/wp-content/uploads/2017/01/fitness-for-actors.jpg');
+background-repeat: no-repeat;background-size: cover;min-height: 100%;width: 1300px; background-position: center;position:absolute">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12" style="text-align:center">
+        <nav class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+            <ng-marquee>
+                <mark>Have A Healthy Day Have A Healthy Day  Have A Healthy Day Have A Healthy Day</mark>
+              </ng-marquee>
+          
+        </nav>
+      </div>
+    </div>
+    <div class="row" style="text-align:center">
+      <div class="col-sm-6" style="text-align:center">
+        <nav class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+         <button class="btn btn-dark"><a routerLink="viewall" style="color: blanchedalmond">View All </a></button>
+         <button class="btn btn-dark"> <a routerLink="create/workout"style="color: blanchedalmond">Create </a></button>
+         <button class="btn btn-dark"><a routerLink="create/category"style="color: blanchedalmond">Category</a></button>
+          <!-- <button class="btn btn-dark"> <a routerLink="track"style="color: blanchedalmond">Track</a></button> -->
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" style="text-align: center">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+
+</body>
